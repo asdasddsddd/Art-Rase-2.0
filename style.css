@@ -1,130 +1,107 @@
 body {
     font-family: Arial, sans-serif;
-    background: #E6E8E6;
+    background: #eee;
     margin: 0;
 }
 
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
 .header {
     background: #ddd;
-    padding: 15px 40px;
+    padding: 15px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-
 .logo {
     font-weight: bold;
     font-size: 20px;
 }
-
 .nav a {
     margin-left: 20px;
     text-decoration: none;
     color: #333;
 }
 
+
 .hero {
     background: #ccc;
     text-align: center;
     padding: 60px 20px;
+    margin-top: 15px;
 }
-
 .hero h1 {
     margin: 0;
     font-size: 28px;
-    color: #555;
 }
-
-.hero h2 {
-    margin: 10px 0;
-    font-size: 22px;
-    color: #555;
-}
-
 .hero p {
-    color: #666;
+    margin: 10px 0;
+}
+.btn {
+    background: #888;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    display: inline-block;
 }
 
-.hero button {
-    margin-top: 20px;
-    padding: 10px 20px;
-    background: #888;
-    border: none;
-    color: white;
-    cursor: pointer;
-}
 
 .section {
     background: #ddd;
-    margin: 20px 40px;
     padding: 20px;
+    margin-top: 15px;
+}
+.section h2 {
+    margin-bottom: 15px;
 }
 
-.section h3 {
-    margin-top: 0;
-    color: #555;
-}
 
 .products {
     display: flex;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
 }
-
 .product {
-    width: 23%;
+    width: 22%;
+    background: #f5f5f5;
+    padding: 10px;
     text-align: center;
 }
-
-.img {
-    height: 200px;
-    background: #bbb;
-    position: relative;
-    overflow: hidden;
-}
-
-.img:before,
-.img:after {
-    content: "";
-    position: absolute;
+.product img {
     width: 100%;
-    height: 1px;
-    background: #999;
-    top: 50%;
-    left: 0;
+    height: 120px;
+    object-fit: cover;
 }
-
-.img:before {
-    transform: rotate(45deg);
-}
-
-.img:after {
-    transform: rotate(-45deg);
-}
-
 .price {
     margin-top: 5px;
 }
-
-.old {
+.old-price {
     text-decoration: line-through;
-    color: #666;
+    color: #777;
     margin-right: 5px;
 }
 
-.new {
-    font-weight: bold;
-}
-
 .contact {
-    background: #E6E8E6;
-    margin: 20px 40px;
+    background: #ddd;
     padding: 20px;
+    margin-top: 15px;
 }
-
 .footer {
     background: #ccc;
-    padding: 15px 40px;
+    padding: 15px;
+    margin-top: 15px;
     display: flex;
     justify-content: space-between;
     font-size: 14px;
+}
+
+@media (max-width: 768px) {
+    .product {
+        width: calc(50% - 15px);
+    }
 }
